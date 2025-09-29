@@ -32,6 +32,7 @@ public class ChatController {
     @SendTo("/topic/room/{roomId}") //subscribe
     public Message sendMesssage(@DestinationVariable String roomId, @RequestBody MessageRequest request){
 
+        //comment1
         Room room = roomRepository.findByRoomId(request.getRoomId());
 
         Message msg = new Message();
